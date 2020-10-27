@@ -1,6 +1,7 @@
 {
     "jumbotronData": [
         {
+            "id": 1,
             "primaryColor":"#FF9933",
             "heading":"Heading Text",
             "subheading":"subheading text spanning to multiple lines subheading text spanning to multiple lines subheading text spanning to multiple lines",
@@ -10,15 +11,17 @@
             "imgSrc":"https://images.unsplash.com/photo-1464965911861-746a04b4bca6"
         },
         {
+            "id": 2,
             "primaryColor":"#FFFFFF",
             "heading":"Heading Text",
             "subheading":"subheading text spanning to multiple lines subheading text spanning to multiple lines subheading text spanning to multiple lines",
-            "headingColor":"#138808",
+            "headingColor":"#8ac41d",
             "subheadingColor":"#6ee05c",
             "imageMode":"left",
             "imgSrc":"https://images.unsplash.com/photo-1464965911861-746a04b4bca6"
         },
         {
+            "id": 3,
             "primaryColor":"#138808",
             "heading":"Heading Text",
             "subheading":"subheading text spanning to multiple lines subheading text spanning to multiple lines subheading text spanning to multiple lines",
@@ -28,7 +31,24 @@
             "imgSrc":"https://images.unsplash.com/photo-1464965911861-746a04b4bca6"
         }
     ],
-    "nutritionData": [
-        
-    ]
+    "nutritionData": {
+        "serving_size": "100g",
+        "calories": "89",
+        "cal_values": [
+            { "value_name": "Total Fat", "qty": "0.3g", "perc": "0%", "level": "1" },
+            { "value_name": "Total Fat", "qty": "0.3g", "perc": "0%", "level": "2" },
+            { "value_name": "Total Fat", "qty": "0.3g", "perc": "0%", "level": "1" },
+            { "value_name": "Total Fat", "qty": "0.3g", "perc": "0%", "level": "1" },
+            { "value_name": "Total Fat", "qty": "0.3g", "perc": "0%", "level": "2" },
+            { "value_name": "Total Fat", "qty": "0.3g", "perc": "0%", "level": "2" },
+            { "value_name": "Total Fat", "qty": "0.3g", "perc": "0%", "level": "1" }
+        ],
+        "other_info": [
+            { "value_name": "Total Fat", "qty": "0.3g", "perc": "0%"},
+            { "value_name": "Total Fat", "qty": "0.3g", "perc": "0%"},
+            { "value_name": "Total Fat", "qty": "0.3g", "perc": "0%"},
+            { "value_name": "Total Fat", "qty": "0.3g", "perc": "0%"}
+        ]
+
+    }
 }

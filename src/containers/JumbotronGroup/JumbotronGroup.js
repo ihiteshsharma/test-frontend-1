@@ -6,14 +6,15 @@ import Jumbotron from '../../components/Jumbotron/Jumbotron';
 let data = require('../../data.json').jumbotronData;
 
 const Wrapper = styled.div`
-
+/* add styles here later if required */
 `;
 
 const JumbotronGroup = (props) => {
     return(
         <Wrapper>
             {data.map(jumbotron => 
-                <Jumbotron 
+                <Jumbotron
+                key={jumbotron.id} 
                 primaryColor={jumbotron.primaryColor}
                 heading={jumbotron.heading}
                 subheading={jumbotron.subheading}

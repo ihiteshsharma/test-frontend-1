@@ -19,7 +19,7 @@ const ChildWrapper = styled.div`
     width: 50%;
     height: fit-content;
     padding: 2%;
-
+    margin-left: ${props => props.imageMode === "left" ? "2%" : 0};
     @media only screen and (max-width: 768px) {
         width: 100%;
     }
@@ -29,6 +29,8 @@ const Heading = styled.h1`
     font-family: 'Kaushan Script', cursive;
     font-size: 5em;
     color: ${props => props.headingColor};
+    padding: 0;
+    margin: 0;
 
     @media only screen and (max-width: 768px) {
         font-size: 4em;
@@ -36,17 +38,18 @@ const Heading = styled.h1`
 `;
 
 const Subheading = styled.h3`
-    margin-top: 1em;
+    margin-top: 0.5em;
     font-size: 1em;
     color: ${props => props.subheadingColor};
-
+    font-family: 'Segoe UI', sans-serif;
+    font-weight: 300;
     @media only screen and (max-width: 768px) {
         font-size: 1em;
     }
 `;
 
 const Img = styled.img`
-    max-width: 400px;
+    width: 50%;
     height: auto;
 
     @media only screen and (max-width: 768px) {
@@ -55,13 +58,12 @@ const Img = styled.img`
     }
 `;
 
-
 const Jumbotron = (props) => {
     let { primaryColor, heading, headingColor, subheading, subheadingColor, imageMode, imgSrc } = props;
     return(
         <Wrapper primaryColor={primaryColor} headingColor={headingColor}>
             {imageMode === "left" ? <Img src={imgSrc} /> : null}
-            <ChildWrapper>
+            <ChildWrapper imageMode={imageMode}>
                 <Heading headingColor={headingColor}>{heading}</Heading>
                 <Subheading subheadingColor={subheadingColor}>{subheading}</Subheading>
             </ChildWrapper>

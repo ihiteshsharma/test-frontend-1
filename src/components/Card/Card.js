@@ -11,20 +11,27 @@ const Wrapper = styled.div`
     padding: 2%;
     box-shadow: 0 4px 8px 0 rgba(0,0,0,0.4);
     background-color: #FFF;
+    z-index: 999;
 `;
 
 const Separator = styled.div`
-    height: 5px;
+    height: 3px;
     background-color: #000;
     margin: 1% 0;
 `;
 
-const Card = (props) => {
+const CardHeading = styled.span`
+    font-size: 1rem;
+    font-weight: 600;
+    font-family: 'Raleway', sans-serif;
+`;
+
+const Card = (props, { children }) => {
     return(
         <Wrapper>
-            CARD
+            <CardHeading>{props.cardHeading}</CardHeading>
             <Separator />
-            Card
+            {children}
         </Wrapper>
     );
 }
