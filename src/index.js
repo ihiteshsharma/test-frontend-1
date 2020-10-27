@@ -1,12 +1,28 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import Jumbotron from './components/Jumbotron/Jumbotron';
 import './index.css';
-import App from './App';
 import reportWebVitals from './reportWebVitals';
+
+const App = ({ children }) => {
+  return(
+    <div>
+      {children}
+    </div>
+  )
+}
 
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+    <App>
+      <Jumbotron 
+      primaryColor="blue"
+      heading="Heading Text"
+      subheading="subheading text spanning to multiple lines subheading text spanning to multiple lines subheading text spanning to multiple lines"
+      headingColor="white"
+      subheadingColor="aqua"
+      imgSrc="https://unsplash.com/photos/FCrgmqqvl-w"/>
+    </App>
   </React.StrictMode>,
   document.getElementById('root')
 );
