@@ -1,59 +1,71 @@
 import React from 'react';
 import styled from 'styled-components';
-
+// Green - 
 const Wrapper = styled.div`
-    padding: 1rem;
-    margin: 0 auto;
-    width: 90vw;
+    padding: 2%;
+    width: auto;
     height: max-content;
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
     align-items: center;
     background-color: ${props => props.primaryColor ? props.primaryColor : "purple"};
+    border-bottom: 5px solid ${props => props.headingColor};
+    @media only screen and (max-width: 768px) {
+        flex-direction: column;
+    }
 `;
 
 const ChildWrapper = styled.div`
-    padding: 1rem;
     width: 50%;
-    height: 100%;
-    margin: 0 auto;
+    height: fit-content;
+    padding: 2%;
+
+    @media only screen and (max-width: 768px) {
+        width: 100%;
+    }
 `;
 
 const Heading = styled.h1`
     font-family: 'Kaushan Script', cursive;
     font-size: 5em;
-    color: ${props => props.headingColor}
+    color: ${props => props.headingColor};
+
+    @media only screen and (max-width: 768px) {
+        font-size: 4em;
+    }
 `;
 
 const Subheading = styled.h3`
-    margin-top: 1rem;
-    font-family: 'Montserrat', sans-serif;
-    font-size: 1rem;
-    color: ${props => props.subheadingColor}
+    margin-top: 1em;
+    font-size: 1em;
+    color: ${props => props.subheadingColor};
+
+    @media only screen and (max-width: 768px) {
+        font-size: 1em;
+    }
 `;
 
 const Img = styled.img`
-    width: 400px;
-    height: 400px;
-    src: ${props => props.imgSrc}
+    max-width: 400px;
+    height: auto;
+
+    @media only screen and (max-width: 768px) {
+        width: 100%;
+        order: 2;
+    }
 `;
 
 
 const Jumbotron = (props) => {
     let { primaryColor, heading, headingColor, subheading, subheadingColor, imageMode, imgSrc } = props;
-    imageMode = imageMode === null || imageMode === undefined ? "right" : imageMode;
     return(
-        <Wrapper primaryColor={primaryColor}>
-            {imageMode === "left" ? <ChildWrapper>
-                <Img imgSrc={imgSrc} />
-            </ChildWrapper> : null}
+        <Wrapper primaryColor={primaryColor} headingColor={headingColor}>
+            {imageMode === "left" ? <Img src={imgSrc} /> : null}
             <ChildWrapper>
                 <Heading headingColor={headingColor}>{heading}</Heading>
                 <Subheading subheadingColor={subheadingColor}>{subheading}</Subheading>
             </ChildWrapper>
-            {imageMode === "right" ? <ChildWrapper>
-                <Img imgSrc={imgSrc} />
-            </ChildWrapper> : null}
+            {imageMode === "right" ? <Img src={imgSrc} /> : null}
         </Wrapper>
     );
 };

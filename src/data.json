@@ -1,0 +1,34 @@
+{
+    "jumbotronData": [
+        {
+            "primaryColor":"#FF9933",
+            "heading":"Heading Text",
+            "subheading":"subheading text spanning to multiple lines subheading text spanning to multiple lines subheading text spanning to multiple lines",
+            "headingColor":"#804000",
+            "subheadingColor":"#ffcc99",
+            "imageMode":"right",
+            "imgSrc":"https://images.unsplash.com/photo-1464965911861-746a04b4bca6"
+        },
+        {
+            "primaryColor":"#FFFFFF",
+            "heading":"Heading Text",
+            "subheading":"subheading text spanning to multiple lines subheading text spanning to multiple lines subheading text spanning to multiple lines",
+            "headingColor":"#138808",
+            "subheadingColor":"#6ee05c",
+            "imageMode":"left",
+            "imgSrc":"https://images.unsplash.com/photo-1464965911861-746a04b4bca6"
+        },
+        {
+            "primaryColor":"#138808",
+            "heading":"Heading Text",
+            "subheading":"subheading text spanning to multiple lines subheading text spanning to multiple lines subheading text spanning to multiple lines",
+            "headingColor":"#fcd703",
+            "subheadingColor":"#9df04f",
+            "imageMode":"right",
+            "imgSrc":"https://images.unsplash.com/photo-1464965911861-746a04b4bca6"
+        }
+    ],
+    "nutritionData": [
+        
+    ]
+}

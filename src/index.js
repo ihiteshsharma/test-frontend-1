@@ -1,27 +1,34 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import Jumbotron from './components/Jumbotron/Jumbotron';
+import styled from 'styled-components';
+import Header from './components/Header/Header';
+import logo from './assets/imgs/placeholderLogo.png';
 import './index.css';
 import reportWebVitals from './reportWebVitals';
+import JumbotronGroup from './containers/JumbotronGroup/JumbotronGroup';
+import Card from './components/Card/Card';
 
-const App = ({ children }) => {
-  return(
-    <div>
-      {children}
-    </div>
-  )
-}
+const App = styled.div`
+    height: auto;
+    border: 3px solid black;
+    padding: 1rem 0;
+    margin: 0.1rem;
+    border-radius: 30px;
+    background-color: #fff;
+`;
 
 ReactDOM.render(
   <React.StrictMode>
     <App>
-      <Jumbotron 
-      primaryColor="blue"
-      heading="Heading Text"
-      subheading="subheading text spanning to multiple lines subheading text spanning to multiple lines subheading text spanning to multiple lines"
-      headingColor="white"
-      subheadingColor="aqua"
-      imgSrc="https://unsplash.com/photos/FCrgmqqvl-w"/>
+      <Header 
+      logoSrc={logo}
+      logoAlt="Logo Img"
+      brandName="Healthy Fruits"
+      tagLine="Delivering freshness with love"
+      />
+      <JumbotronGroup />
+      <Card />
+      
     </App>
   </React.StrictMode>,
   document.getElementById('root')
